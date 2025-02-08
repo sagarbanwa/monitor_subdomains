@@ -1,8 +1,8 @@
-🔍 Monitor Subdomains - Automated Subdomain Discovery & Monitoring
+##🔍 Monitor Subdomains - Automated Subdomain Discovery & Monitoring
 
 Monitor Subdomains is a powerful Golang tool that continuously discovers and monitors subdomains for given domains. It leverages multiple security tools to identify new subdomains, analyze technologies, take screenshots, and send real-time notifications via Discord.
 
-🚀 Features
+##🚀 Features
 
 Continuous Monitoring: Scans for new subdomains every 20 minutes.
 
@@ -20,10 +20,10 @@ Discord Notifications: Sends newly discovered subdomains, detected technologies,
 
 Supports Bulk Domains: Accepts a list of domains using -l <file>.
 
-📌 Installation
+##📌 Installation
 
 Ensure you have the required dependencies installed:
-
+```
 go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install github.com/owasp-amass/amass/v3/...@latest
 go install github.com/tomnomnom/assetfinder@latest
@@ -32,25 +32,27 @@ go install github.com/d3mondev/puredns/v2@latest
 go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest
 go install github.com/sensepost/gowitness@latest
 go install github.com/projectdiscovery/httpx/cmd/httpx@latest
-
-🔧 Usage
+```
+##🔧 Usage
 
 Monitor a single domain:
 
-./monitor_subdomains example.com
+```./monitor_subdomains example.com```
 
 Monitor multiple domains from a file:
 
-./monitor_subdomains -l domains.txt
+```./monitor_subdomains -l domains.txt```
 
 Example domains.txt:
-
+```
 example.com
 target.com
 anotherdomain.org
+```
 
-📂 Output Structure
+##📂 Output Structure
 
+```
 results/
   ├── example.com/
   │   ├── subdomains.txt
@@ -60,8 +62,9 @@ results/
   │   ├── subdomains.txt
   │   ├── screenshots/
   │   ├── technologies.json
+```
 
-🛠 Upcoming Features
+##🛠 Upcoming Features
 
 Integration with Security APIs: SecurityTrails, Shodan, and more.
 
@@ -71,7 +74,7 @@ CNAME & TLS Extraction: Using dnsx and cero for deeper analysis.
 
 Automated Vulnerability Scanning: Running nuclei on discovered subdomains.
 
-🤝 Contributions
+##🤝 Contributions
 
 Pull requests and issues are welcome! Help improve and expand the tool.
 
